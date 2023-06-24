@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" />
+</head>
+<body style="margin-left:35%; margin-top:20%; border:1px solid black; Height: 200px;  padding: 10px; width: 35%">
+    <div style=  "font-weight:bolder; padding-left:40%;"><%= blog.title %></div>
+    <div class="description">
+        <p><%= blog.body %></p>
+    </div>
+    <button><a href="/blogs <%= blog._id %>/ edit">Edit</a><</button>
+
+    <form action="/blogs <%= blog._id %>?_method=DELETE" method="POST">
+        <button>delete</button>
+
+    </form>
+  
+</body>
+</html>

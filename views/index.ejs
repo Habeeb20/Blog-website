@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" />
+
+
+<html>
+    <head>
+        <Title>Blog App</Title>
+    </head><style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-size:cover;
+            background-position: center;
+           
+        }
+    
+        .container {
+            background-color: rgb(28, 45, 58) ;
+            overflow: hidden;
+            margin: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 10px;
+            
+    
+    
+        }
+    
+        .container a {
+            display: inline-block;
+            padding: 10px;
+            margin-right:50px;
+            
+    
+        }
+    
+        .right a {
+            float: left;
+            margin-left: 200px;
+            color:white;
+            font-size: large;
+            font-weight: 100;
+        }
+    
+        a {
+            float: right;
+            text-decoration: none;
+            color: white;
+            text-transform: capitalize;
+        }
+    
+    
+        
+    </style>
+    <body>
+        <div class="container">
+            <div class="right">
+                <a href="#"><i class="code icon"></i>BlogSite</a>
+            </div>
+        
+              
+    
+           
+            <a href="/blogs/new">newPost </a>
+            <a href="/">Home</a>
+            
+
+        </div>
+
+        <% blog.forEach((blog) => { %>
+            <div>
+                <h2><%= blog.title %></h2>
+                <img src=" <%= blog.image %>" >
+                <span><%blog.created %></span>
+                <p><%= blog.body %></p>
+                <a href="/blogs/<%= blog._id %>">Read more</a>
+            </div>
+
+        <% }) %>
+
+    </div>   
+</body>
+    
+</html>
+         

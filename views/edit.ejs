@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" />
+</head>
+<body style="margin-left:35%; margin-top:20%; border:1px solid black; Height: 200px;  padding: 10px; width: 35%">
+    <div style=  "font-weight:bolder; padding-left:40%;">Edit <%= blog.title %> </div>
+    <form action="/blogs/<%= blogs._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label for="#">Title</label>
+            <input style="width:100%" type="text" name="blog[title]" value="<%= blog.title %>">
+        </div>
+
+        <div class="field">
+            <label for="#">Image</label>
+            <input style="width:100%" type="text" name="blog[image]" value="<%= blog.image %>" >
+        </div>
+   
+       
+        <div class="field">
+            <label for="#">body</label>
+            <textarea name="blog[body]"><%= blog.body %></textarea>
+        </div>
+   
+        <input style="margin-left:40%;" class="ui violet basic button" type="submit">
+
+    </form>
+</body>
+</html>
